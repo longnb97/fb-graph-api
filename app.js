@@ -5,8 +5,8 @@ const cors = require('cors');
 
 const PORT = process.env.PORT || 7000;
 
-const controller = require('./fb.controller')
-const Facebook = require('./config');
+const facebookMiddleware = require('./fb.middleware')
+const facebook = require('./config');
 
 let app = express();
 
@@ -20,6 +20,7 @@ app.listen(PORT, (err)=> {
     else console.log(`Server listenning at ${PORT}`);
 })
 
-app.get('/', controller.welcome);
+app.get('/', facebookMiddleware.welcome);
+app.get('/api', facebookMiddleware.api)
 
 
