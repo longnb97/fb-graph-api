@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const PORT = process.env.PORT || 7070;
+const PORT = process.env.PORT || 5050;
 
 let app = express();
 
