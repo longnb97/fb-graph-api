@@ -5,8 +5,10 @@ module.exports = {
 
 function welcome(req, res) {
     res.send('WELCOME !');
+    console.log('WELCOME !');
 }
 
 function api(req, res){
-    res.send('middleware')
+    res.send('middleware');
+    console.log('middleware');
 }
